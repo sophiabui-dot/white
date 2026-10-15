@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- (PART A) SPLASH SCREEN -->
-<div id="splash" onclick="start()">&#127929; Click to start!</div>
+/* (PART A) SPLASH SCREEN */
+#splash {
+  /* (A1) FULLSCREEN */
+  position: fixed; top: 0; left: 0; z-index: 999;
+  width: 100vw; height: 100vh;
  
-<!-- (PART B) BGM -->
-<audio id="bgm" src="piano.mp3" loop></audio>
+  /* (A2) CENTER */
+  display: flex;
+  align-items: center; justify-content: center;
  
-<!-- (PART C) MAIN CONTENT -->
-<h1>XYZ MUSICIAN</h1>
-<p>Hear me roar!</p>
-
+  /* (A3) COSMETICS */
+  font-size: 24px;
+  color: #fff; background: #000;
+}
+ 
+/* (A4) TO HIDE THE SPLASH SCREEN */
+#splash.hide {
+  opacity: 0; visibility: hidden;
+  transition: all 1s;
+}
 
 <head>
     <meta charset="UTF-8">
