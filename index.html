@@ -15,18 +15,112 @@
 <style>
 body {background-color: white)}
 h1   {color: black; font-family:Arial, Helvetica, sans-serif ; text-align:center}
-p    {color: gray; font-family: Georgia, 'Times New Roman', Times, serif; text-align:center}
+p    {color: black; font-family: Arial, Helvetica, sans-serif; text-align:center}
+
+			:root {
+				color: #000;
+				background: #fff;
+			}
+
+			/**
+		 * Reset button styles
+		 * It takes some work to achieve a “blank slate” look.
+		 */
+			button {
+				padding: 0;
+				border: none;
+				font: inherit;
+				color: inherit;
+				background-color: transparent;
+				cursor: pointer;
+			}
+
+			/**
+		 * Button component
+		 */
+			.btn {
+				/* default for <button>, but needed for <a> */
+				display: inline-block;
+				text-align: center;
+				text-decoration: none;
+
+				/* create a small space when buttons wrap on 2 lines */
+				margin: 2px 0;
+
+				/* invisible border (will be colored on hover/focus) */
+				border: solid 2px transparent;
+				border-radius: 0.4em;
+
+				/* button size comes from text + padding, avoid height */
+				padding: 0.5em 1em;
+
+				/* make sure colors have enough contrast! */
+				color: #000000;
+				background-color: #9c9c9c;
+			}
+
+			/* Old-school "push button" effect on clic + color tweak */
+			.btn:active {
+				transform: translateY(1px);
+				filter: saturate(150%);
+			}
+
+			/* Swap colors on mouse-over */
+			.btn:hover {
+				color: #9555af;
+				border-color: currentColor;
+				background-color: white;
+			}
+
+			/* Define a custom focus outline that should work on any background */
+			.btn:focus-visible {
+				/* paint a 2px white pseudo-outline using box-shadow */
+				box-shadow: 0 0 0 2px #fff;
+				/* then paint a 2px dark pink outline and offset it to reveal one or two pixels of the pseudo-outline */
+				outline: solid 2px #d59;
+				outline-offset: 1px;
+			}
+
+			/* Disable the default outline on a focused element which doesn’t have the :focus-visible state (e.g. a button after a mouse click) */
+			.btn:focus:not(:focus-visible) {
+				outline-color: transparent;
+			}
+		
 </style>
 </head>
 
 <body>
-<p> welcome to
+<p> welcome to </p>
     <h1 style="font-size:xx-large"> white noise </h1> 
-    <p> "white noise" is a small curation of songs i envision as the color white. aka sophia puts you onto her current music rotation. </p>
-    <p style="font-size: small";> you are now listening to: HEADLOCK - Luci Gang </p>
-    <a href="about.html"> About Me</a>
-    
-<img src="record-spinning.gif" style="text-align: center;" width="300">
+    <p> "white noise" is a small curation of songs i envision as the color white.  </p>
+    <p style="font-size: small;"> aka sophia puts you onto her current music rotation. </p>
+<p>
+    <img src="cat-wit-da-headphones.jpeg"></p>
+
+<p>
+    <img src="record-spinning.gif" width="20">
+     you are now listening to: HEADLOCK - Luci Gang </p>
+
+<button type="button"> next song 1
+    <a href="song-1.html"></a>
+</button>
+
+<a href="song-1.html">
+    <button type="button"> next song 2
+</button>
+</a>
+
+<p>
+    <a href="song-1.html" class="no-underline" style="border-color: black; background-color: rgb(220, 220, 220); color: black; padding: 5px; border-radius: 1px; border-width: 1px);"> put me on!</a>
+</p>
+
+<button>  
+    <a ref="song-1.html"> put me on!</a>
+</button>
+
+<a ref="song-1.html"> put me on!</a>
+
+<a href="song-1.html" class="btn">put me on! 3</a>
 </body>
 
 </html>
